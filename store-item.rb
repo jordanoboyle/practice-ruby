@@ -14,21 +14,21 @@
 class ItemInformation 
   attr_reader :item, :color, :size, :price  #I am dumb
   attr_writer :color, :size
-  def initialize(item_name, color, size, price)
-    @item = item_name
-    @color = color
-    @size = size
-    @price = price
+  def initialize(options)
+    @item = options[:item_name]
+    @color = options[:color]
+    @size = options[:size]
+    @price = options[:price]
   end
 
-  def price_increase(percentage_increase)
-    @price = @price + (@price * (percentage_increase / 100))
-  end
+  def price_increase(percent_increase)
+    @price = @price + (@price * (percent_increase / 100))  
+  end 
 
 end
 
-item1 = ItemInformation.new("Stool", "black", "Large", 55)
-item2 = ItemInformation.new("Chair", "blue", "small", 45)
+item1 = ItemInformation.new({item_name: "Stool", color: "black", size: "Large", price: 55})
+item2 = ItemInformation.new({item_name:"Chair", color: "blue", size: "small", price: 45})
 
 
 p item1.item
@@ -42,6 +42,6 @@ item1.size = "medium"
 
 # puts "The stool is now #{item1.color}."
 # puts "We changed the size of the stool to #{item1.size}."
-
-item1.price_increase(20)
-p "The new price of the stool is $#{item1.price}.00" # 66
+puts item1.price
+item1.price_increase(20)  # this is still an issue
+puts item1.price

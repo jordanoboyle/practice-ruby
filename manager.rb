@@ -20,9 +20,9 @@ end
 
 employee1 = Employee.new({first_name: "Majora", last_name: "Carter", salary: 80000, active: true})
 employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 70000, active: true)
-# employee1.print_info
-# employee2.print_info
-p employee1.salary
+# # employee1.print_info
+# # employee2.print_info
+# p employee1.salary
 
 class Manager < Employee
   attr_reader :employees
@@ -53,6 +53,6 @@ manager.send_report
 
 p manager.employees
 
-# manager.give_all_raises
+manager.give_all_raises
 
 # p manage.employees

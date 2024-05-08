@@ -1,5 +1,5 @@
 class Employee
-  attr_reader :first_name, :last_name, :active
+  attr_reader :first_name, :last_name, :active, :salary
   attr_writer :active, :salary
 
   def initialize(input_options)
@@ -22,6 +22,7 @@ employee1 = Employee.new({first_name: "Majora", last_name: "Carter", salary: 800
 employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 70000, active: true)
 # employee1.print_info
 # employee2.print_info
+p employee1.salary
 
 class Manager < Employee
   attr_reader :employees
@@ -36,12 +37,12 @@ class Manager < Employee
     puts "Email sent!"
   end
 
-  # def give_all_raises
-  #   raise = 5000
-  #   @employees.each do |emp|
-  #     emp.salary = emp.salary + raise
-  #   end
-  # end
+  def give_all_raises
+    raise = 5000
+    @employees.each do |emp|
+      emp.salary = emp.salary + raise
+    end
+  end
 end
 
 

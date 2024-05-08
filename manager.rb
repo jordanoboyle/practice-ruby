@@ -45,8 +45,8 @@ class Manager < Employee
   end
 
   def fire_all_employees
-    puts "fire everyone"
-    puts "print stuff twice"
+    p @employees[0]
+    p @employees[1]
   end
 end
 

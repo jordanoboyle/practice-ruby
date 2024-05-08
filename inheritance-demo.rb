@@ -1,6 +1,7 @@
 
 # I want to create a class these can take traits from
 class Transportation_mode
+  attr_reader :speed, :direction
   def initialize
     @speed     = 0
     @direction = 'north'
@@ -30,3 +31,12 @@ class Bike < Transportation_mode
     puts "Ring ring!"
   end
 end
+
+bike1 = Bike.new 
+
+car1 = Car.new
+
+p bike1  # test to see what comes out
+
+p car1
+

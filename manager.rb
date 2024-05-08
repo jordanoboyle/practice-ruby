@@ -1,6 +1,6 @@
 class Employee
   attr_reader :first_name, :last_name, :active, :salary
-  attr_writer :active, :salary
+  attr_writer :active, :salary, :status
 
   def initialize(input_options)
     @first_name = input_options[:first_name]
@@ -45,8 +45,9 @@ class Manager < Employee
   end
 
   def fire_all_employees
-    p @employees[0]
-    p @employees[1]
+    @employees[0].status = false
+    @employees[1].status = false
+    return nil
   end
 end
 
@@ -69,4 +70,7 @@ manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000
 # give that employee a raise
 # add a loop to scale
 
-p manager.fire_all_employees
+manager.fire_all_employees
+
+p employee1.status
+p employee2.status

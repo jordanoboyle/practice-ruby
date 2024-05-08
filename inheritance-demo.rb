@@ -1,6 +1,6 @@
 
 # I want to create a class these can take traits from
-class Transportation
+class Transportation_mode
   def initialize
     @speed     = 0
     @direction = 'north'
@@ -19,14 +19,13 @@ class Transportation
   end
 end
 
-
-class Car
+class Car < Transportation_mode
   def honk_horn
     puts "Beeeeeeep!"
   end
 end
 
-class Bike
+class Bike < Transportation_mode
   def ring_bell
     puts "Ring ring!"
   end

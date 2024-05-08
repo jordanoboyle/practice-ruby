@@ -36,7 +36,12 @@ bike1 = Bike.new
 
 car1 = Car.new
 
-p bike1  # test to see what comes out
+car1.accelerate
+bike1.accelerate
 
+p bike1  # test to see what comes out
 p car1
+
+car1.honk_horn
+bike1.ring_bell  # tests to see if there are issues with inheritance
 

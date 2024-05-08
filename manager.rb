@@ -16,6 +16,10 @@ class Employee
   def give_annual_raise
     @salary = 1.05 * @salary
   end
+
+  def name_change
+    puts "from employee"
+  end
 end
 
 employee1 = Employee.new({first_name: "Majora", last_name: "Carter", salary: 80000, active: true})
@@ -49,6 +53,10 @@ class Manager < Employee
       emp.active = false
     end
   end
+
+  # def name_change
+  #   puts "name change method"
+  # end
 end
 
 
@@ -70,10 +78,15 @@ manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000
 # give that employee a raise
 # add a loop to scale
 
-p employee1.active
-p employee2.active
+# p employee1.active
+# p employee2.active
 
-manager.fire_all_employees
+# manager.fire_all_employees
 
-p employee1.active
-p employee2.active
+# p employee1.active
+# p employee2.active
+
+# PUT IN TWO METHODS OF SAME NAME IN MANAGER AND EMPLOYEE CLASSES
+
+manager.name_change  # if meth in both classes, it will class Manager meth will override. 
+                     # if meth 

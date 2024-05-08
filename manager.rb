@@ -45,9 +45,9 @@ class Manager < Employee
   end
 
   def fire_all_employees
-    @employees[0].status = false
-    @employees[1].status = false
-    return nil
+    @employees.each do |emp|
+      emp.active = false
+    end
   end
 end
 
@@ -70,7 +70,10 @@ manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000
 # give that employee a raise
 # add a loop to scale
 
+p employee1.active
+p employee2.active
+
 manager.fire_all_employees
 
-p employee1.status
-p employee2.status
+p employee1.active
+p employee2.active

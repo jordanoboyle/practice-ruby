@@ -22,7 +22,8 @@ class ItemInformation
   end
 
   def price_increase(percent_increase)
-    @price = @price + (@price * (percent_increase / 100))  
+    added_value = @price * (percent_increase.to_f / 100)  
+    @price = @price + added_value
   end 
 
 end

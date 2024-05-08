@@ -43,16 +43,30 @@ class Manager < Employee
       emp.salary = emp.salary + raise
     end
   end
+
+  def fire_all_employees
+    puts "fire everyone"
+    puts "print stuff twice"
+  end
 end
 
 
 
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
-manager.print_info
-manager.send_report
+# manager.print_info
+# manager.send_report
 
-p manager.employees
+# p manager.employees
 
-manager.give_all_raises
+# manager.give_all_raises
 
-# p manage.employees
+# p manager.employees
+
+# I want to be able to adjust active status of employee. Turn between false and true. Power to manager.
+# make the method
+# access the data
+# find a particular employee
+# give that employee a raise
+# add a loop to scale
+
+p manager.fire_all_employees

@@ -1,6 +1,5 @@
-
 # I want to create a class these can take traits from
-class Transportation_mode
+class TransportationMode
   attr_reader :speed, :direction
   def initialize
     @speed     = 0

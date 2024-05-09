@@ -25,11 +25,28 @@ def i_love_food(food_array)
   end
 end
 
-i_love_food(test_food_array)
+# i_love_food(test_food_array)
+
+def print_top_foods (food_array) # scalable to any number
+  counter = 1
+  
+  food_array.each do |food|
+    p "#{counter}. #{food}"
+    counter += 1
+  end
+
+end
+
+
+print_top_foods(test_food_array)
+
+
+
+
 
 # write function and call with print statement
-# prove we can print "I love <food type>"
-# plan loop that runs five times (each, while, for)
+# prove we can print foods with numerals example 1. <fav food>
+# plan a loop that can accomodate
 #print out the love in sequence top down
 
 

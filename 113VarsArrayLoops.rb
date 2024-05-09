@@ -17,12 +17,15 @@ def favorite_food
   return fav_foods
 end
 
-# p favorite_food()
+test_food_array = ["fish", "pies", "candy", "chicken", "potatoes"] # for purposes of testing next two methods
 
 def i_love_food(food_array)
-  puts "This is top five"
-  
+  food_array.each do |food|
+    puts "I love #{food}."
+  end
 end
+
+i_love_food(test_food_array)
 
 # write function and call with print statement
 # prove we can print "I love <food type>"

@@ -17,5 +17,16 @@ def favorite_food
   return fav_foods
 end
 
-p favorite_food()
+# p favorite_food()
+
+def i_love_food(food_array)
+  puts "This is top five"
+  
+end
+
+# write function and call with print statement
+# prove we can print "I love <food type>"
+# plan loop that runs five times (each, while, for)
+#print out the love in sequence top down
+
 

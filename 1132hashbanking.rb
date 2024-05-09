@@ -2,7 +2,7 @@
 
 def add_depositor # can be modified to rip through a data base
   bankers = []
-  5.times do
+  2.times do
     puts "Enter first name:"
     first_name = gets.chomp.capitalize
     puts "Enter last name"
@@ -52,17 +52,23 @@ end
 #lets make sure we can access stuff from the hash pulled
 # can we loop and print one piece of info?
 
+# temp_clients2 = [
+#   {first_name: "Jules", last_name: "Run The", email_address: "atlantahellyeah@rtj.com", account_num: 00000000000},
+#   {first_name: "James", last_name: "Bonds", email_address: "bond@mi6.com", account_num: 00000000000},
+#   {first_name: "Jack", last_name: "Sparrow", email_address: "sparrow@blackpearl.com", account_num: 123489},
+# ]
+
 def display_client_info(client_account_hash) # :first_name :last_name :email_address :account_num
   client_account_hash.each do |info| 
     p "FIRST NAME: #{info[:first_name]}"
-    p "LAST NAME:  #{info[:first_name]}"
-    p "EMAIL:      #{info[:first_name]}"
-    p "ACCT #:     #{info[:first_name]}"
+    p "LAST NAME:  #{info[:last_name]}"
+    p "EMAIL:      #{info[:email_address]}"
+    p "ACCT #:     #{info[:account_num]}"
   end
 
 end
 
-display_client_info(temp_clients)
+display_client_info(add_account_number(add_depositor()))
 
 
 # print out the information of client in a loop
